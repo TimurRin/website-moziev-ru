@@ -1,0 +1,18 @@
+<div class="block intro">
+  <div class="cv name"><%= localization["author.name"] %></div>
+  <div class="cv job-title"><%= localization["author.title"] %></div>
+  <div class="icons">
+    <div class="stack">
+      <% stack.forEach((item) => { %> <%- include('../utils/icon', {type:
+      "stack", icon: item}); %> <% }) %>
+    </div>
+    <div class="contacts">
+      <% contacts.forEach((item) => { %>
+      <a href="<%= item.url[0][0] %>"
+        ><%- include('../utils/icon', {type: "contacts", icon: item.type});
+        %></a
+      >
+      <% }) %>
+    </div>
+  </div>
+</div>
