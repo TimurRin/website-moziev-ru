@@ -8,10 +8,8 @@
     </div>
     <div class="contacts">
       <% contacts.forEach((item) => { %>
-      <a href="<%= item.url[0][0] %>"
-        ><%- include('../utils/icon', {type: "contacts", icon: item.type});
-        %></a
-      >
+      <a href="<%= item.url[0][0] %>"><%- include('../utils/icon', {type: "contacts", icon: item.type});
+        %></a>
       <% }) %>
     </div>
   </div>
