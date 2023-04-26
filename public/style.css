@@ -38,6 +38,8 @@ img {
 .block {
   width: 100vw;
   height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
   text-align: center;
@@ -74,11 +76,11 @@ img {
 
 /* Intro block */
 
-.intro .cv.name {
+.intro .name {
   font-size: 11vmax;
 }
 
-.intro .cv.job-title {
+.intro .title {
   margin-top: 1vh;
   font-size: 4vmax;
 }
@@ -87,7 +89,8 @@ img {
   user-select: none;
 }
 
-.intro .icons .stack, .intro .icons .contacts {
+.intro .icons .stack,
+.intro .icons .contacts {
   padding-top: 2vh;
 }
 
