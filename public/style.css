@@ -46,6 +46,7 @@ img {
   justify-content: center;
   align-items: center;
   scroll-behavior: smooth;
+  padding: 2em 0;
 }
 
 .block.intro {
@@ -74,48 +75,52 @@ img {
 
 /* Intro block */
 
-.intro .name {
-  font-size: 7em;
+.intro .box {
+  width: 80%;
 }
 
-.intro .title {
+.intro .box .name {
+  font-size: 11vmax;
+}
+
+.intro .box .title {
   margin-top: 0;
-  font-size: 3em;
+  font-size: 4vmax;
 }
 
-.intro .icons {
+.intro .box .icons {
   user-select: none;
 }
 
-.intro .icons .stack,
-.intro .icons .contacts {
-  padding-top: 1em;
+.intro .box .icons .stack,
+.intro .box .icons .contacts {
+  padding-top: 2vh;
 }
 
-.intro .icons .stack img {
-  width: 5em;
-  height: 5em;
+.intro .box .icons .stack img {
+  width: 5vmax;
+  height: 5vmax;
 }
 
-.intro .icons .contacts img {
-  width: 3em;
-  height: 3em;
+.intro .box .icons .contacts img {
+  width: 3vmax;
+  height: 3vmax;
 }
 
 /* About block */
 
 .about .box {
   width: 50em;
+  max-width: 80%;
   border: 0.25em #78b6ce solid;
   background-color: #8fc2d6;
 }
 
 .about .box .text {
-  font-size: 1.5em;
-  padding: 1em;
-  padding-top: 0;
+  font-size: 2em;
+  padding: 0 1em;
   overflow: visible;
-  text-align: justify;
+  /* text-align:left; */
 }
 
 .about .box .photo {
@@ -128,11 +133,27 @@ img {
   overflow: clip;
 }
 
+@media (max-width: 640px) {
+  .about .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about .box .text {
+    font-size: 1.25em;
+  }
+
+  .about .box .photo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Projects block */
 
 .projects .title {
   font-size: 3em;
-  padding-top: 1em;
 }
 
 .projects .items {
@@ -229,7 +250,7 @@ img {
 .contacts .title {
   font-size: 3em;
   padding-top: 1em;
-  margin-bottom: 0.20em;
+  margin-bottom: 0.2em;
 }
 
 .contacts .links {
