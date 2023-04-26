@@ -14,7 +14,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   font-family: "molot";
@@ -36,12 +36,10 @@ img {
 /* Blocks */
 
 .block {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   min-width: 100vw;
   min-height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -77,12 +75,12 @@ img {
 /* Intro block */
 
 .intro .name {
-  font-size: 11vmax;
+  font-size: 7em;
 }
 
 .intro .title {
-  margin-top: 1vh;
-  font-size: 4vmax;
+  margin-top: 0;
+  font-size: 3em;
 }
 
 .intro .icons {
@@ -91,54 +89,54 @@ img {
 
 .intro .icons .stack,
 .intro .icons .contacts {
-  padding-top: 2vh;
+  padding-top: 1em;
 }
 
 .intro .icons .stack img {
-  width: 5vmax;
-  height: 5vmax;
+  width: 5em;
+  height: 5em;
 }
 
 .intro .icons .contacts img {
-  width: 3vmax;
-  height: 3vmax;
+  width: 3em;
+  height: 3em;
 }
 
 /* About block */
 
 .about .box {
-  width: 43vmax;
-  border: 3px #78b6ce solid;
+  width: 50em;
+  border: 0.25em #78b6ce solid;
   background-color: #8fc2d6;
 }
 
 .about .box .text {
-  font-size: 2.5vh;
-  padding: 1.5vh;
-  padding-top: 0vh;
+  font-size: 1.5em;
+  padding: 1em;
+  padding-top: 0;
   overflow: visible;
   text-align: justify;
 }
 
 .about .box .photo {
-  padding: 1.5vh;
+  padding: 1em;
   float: left;
   shape-outside: circle();
   background-clip: content-box;
   border-radius: 50%;
-  width: 25vh;
+  width: 15em;
   overflow: clip;
 }
 
 /* Projects block */
 
 .projects .title {
-  font-size: 6vh;
-  padding-top: 5vh;
+  font-size: 3em;
+  padding-top: 1em;
 }
 
 .projects .items {
-  font-size: 2vh;
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -147,111 +145,107 @@ img {
 
 .projects .items .item {
   background-color: white;
-  border: 3px solid black;
-  width: 30vh;
-  margin: 1.5vh;
+  border: 0.25em solid black;
+  width: 16em;
+  margin: 0.5em;
   display: flex;
   flex-flow: column;
   justify-content: baseline;
-  padding-bottom: 1vh;
 }
 
 .projects .items .item .general {
-  padding: 15px;
+  padding: 1em;
 }
 
 .projects .items .item .general .name {
-  font-size: 2.7vh;
+  font-size: 1.5em;
 }
 
 .projects .items .item .general .status {
-  font-size: 1.8vh;
+  font-size: 1em;
+  padding: 0 1em 0 1em;
 }
 
 .projects .items .item .general .status.active {
   background-color: darkgreen;
   color: wheat;
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .general .status.early_access {
   background-color: rgb(198, 201, 40);
   color: rgb(60, 60, 85);
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .general .status.internal_testing {
   background-color: rgb(201, 40, 166);
   color: rgb(236, 236, 236);
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .general .status.in_progress {
   background-color: rgb(201, 145, 40);
   color: rgb(19, 19, 19);
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .general .status.idea {
   background-color: rgb(55, 189, 189);
   color: rgb(18, 18, 31);
-  padding: 0px 3px 0px 3px;
 }
 .projects .items .item .general .status.paused {
   background-color: rgb(194, 194, 194);
   color: rgb(49, 49, 49);
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .general .status.abandoned {
   background-color: rgb(15, 15, 15);
   color: rgb(238, 238, 238);
-  padding: 0px 3px 0px 3px;
 }
 
 .projects .items .item .description {
   font-family: "source-sans-pro";
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1em;
+  padding-right: 1em;
   text-align: justify;
   flex-grow: 2;
 }
 
 .projects .items .item .open-sourced {
-  font-size: 1.7vh;
+  padding-top: 1em;
+  font-size: 1em;
 }
 
 .projects .items .item .stack {
-  margin-bottom: 10px;
-  padding-top: 10px;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
   text-align: center;
 }
 
 .projects .items .item .stack img {
-  width: 3vh;
-  height: 3vh;
+  width: 2em;
+  height: 2em;
 }
 
 /* Contacts block */
 
 .contacts .title {
-  font-size: 6vh;
-  padding-top: 5vh;
+  font-size: 3em;
+  padding-top: 1em;
+  margin-bottom: 0.20em;
 }
 
 .contacts .links {
-  padding: 2vh 5vh 2vh 5vh;
+  padding: 1em 1em 1em 1em;
   background-color: #c4eada;
 }
 
 .contacts .link {
-  font-size: 4vh;
+  font-size: 2em;
 }
 
 .contacts .link img {
-  width: 4vh;
-  height: 4vh;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+  vertical-align: middle;
 }
 
 .contacts .link.linkedin {

@@ -5,8 +5,7 @@
     <div class="links">
       <% contacts.forEach((item) => { %>
       <p class="link <%= item.type %>">
-        <%- include('../utils/icon', {type: "contacts", icon: item.type}); %>
-        <a href="<%= item.url[0][0] %>"><%= item.url[0][1] %></a>
+        <a href="<%= item.url[0][0] %>"><%- include('../utils/icon', {type: "contacts", icon: item.type}); %><%= item.url[0][1] %></a>
       </p>
       <% }) %>
     </div>
