@@ -80,12 +80,12 @@ img {
 }
 
 .intro .box .name {
-  font-size: 11vmax;
+  font-size: 7vmax;
 }
 
 .intro .box .title {
   margin-top: 0;
-  font-size: 4vmax;
+  font-size: 2.5vmax;
 }
 
 .intro .box .icons {
@@ -103,8 +103,8 @@ img {
 }
 
 .intro .box .icons .contacts img {
-  width: 3vmax;
-  height: 3vmax;
+  width: 5vmax;
+  height: 5vmax;
 }
 
 /* About block */
