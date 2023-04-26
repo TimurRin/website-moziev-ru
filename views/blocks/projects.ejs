@@ -1,37 +1,39 @@
+<%- include('../utils/translate'); %>
 <div class="block projects">
-  <div class="title">Projects</div>
+  <div class="title"><%= translate(localization.blocks.projects) %></div>
   <div class="items">
     <% projects.forEach((project)=> { %>
     <div class="item">
       <div class="general">
-        <div class="name"><% if (project.website) { %>
-          <a href="<%= project.website.url %>">
-            <%= project.name %>
-          </a><% } else { %><%=project.name%><% } %>
+        <div class="name"><% if (localization.projects.items[project.name]?.website) { %>
+          <a href="<%= translate(localization.projects.items[project.name]?.website) %>">
+            <%= translate(localization.projects.items[project.name]?.name) %>
+          </a><% } else { %><%= translate(localization.projects.items[project.name]?.name) %><% } %>
         </div>
-        <div class="status">
+        <div class="year">
           <% if (project.year) { %>
           <% if (project.year[1]===project.year[0]) { %>
           <%= project.year[0] %>
           <% } else if (project.year[1] && project.year[1] !== true) { %> <%= project.year[0] %>&ndash;<%= project.year[1] %>
-          <% } else { %> since <%= project.year[0] %>
+          <% } else { %> <%= translate(localization.projects.since) %> <%= project.year[0] %>
           <% } %>
           <% } %>
-          <span class="<%= project.status %>">
-            <%= project.status %>
-          </span>
         </div>
-        <% if (project.openSourced) { %>
-        <div class="open-sourced">
-          <a href="<%= project.openSourced %>">openSourced</a>
+        <div class="status <%= project.status %>">
+          <%= translate(localization.projects.status[project.status]) %>
         </div>
-        <% } %>
       </div>
       <div class="description">
-        <div class="stack">
-          <% project.stack.forEach((item) => { %> <%- include('../utils/icon', {type:
-          "stack", icon: item}); %> <% }) %>
+        <p><%= translate(localization.projects.items[project.name]?.description) %></p>
+      </div>
+      <% if (project.openSourced) { %>
+        <div class="open-sourced">
+          <a href="<%= project.openSourced %>"><%= translate(localization.projects.openSourced) %></a>
         </div>
+        <% } %>
+      <div class="stack">
+        <% project.stack.forEach((item) => { %> <%- include('../utils/icon', {type:
+        "stack", icon: item}); %> <% }) %>
       </div>
     </div>
     <% }) %>

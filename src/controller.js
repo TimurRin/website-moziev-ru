@@ -11,6 +11,7 @@ export const getIndex = async (req, res) => {
       stack: await getDataFromJson("stack"),
       contacts: await getDataFromJson("contacts"),
       projects: await getDataFromJson("projects"),
+      language: "ru"
     });
   } catch (error) {
     console.error(error);

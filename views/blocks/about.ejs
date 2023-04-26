@@ -1,6 +1,7 @@
+<%- include('../utils/translate'); %>
 <div class="block about">
   <div class="box">
-    <img class="photo" src="<%= localization["author.photo"] %>" alt="<%= localization["author.name"] %>" />
-    <p class="text"><%= localization["author.about"] %></p>
+    <img class="photo" src="<%= translate(localization.about.photo) %>" alt="<%= translate(localization.intro.name) %>" />
+    <p class="text"><%= translate(localization.about.text) %></p>
   </div>
 </div>

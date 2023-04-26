@@ -1,6 +1,7 @@
+<%- include('../utils/translate'); %>
 <div class="block contacts">
   <div class="box">
-    <div class="title">Contacts</div>
+    <div class="title"><%= translate(localization.blocks.contacts) %></div>
     <div class="links">
       <% contacts.forEach((item) => { %>
       <p class="link <%= item.type %>">

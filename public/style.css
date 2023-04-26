@@ -138,13 +138,11 @@ img {
 }
 
 .projects .items {
-  padding-top: 3vh;
   font-size: 2vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: flex-start; */
 }
 
 .projects .items .item {
@@ -154,7 +152,7 @@ img {
   margin: 1.5vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: baseline;
   padding-bottom: 1vh;
 }
 
@@ -170,49 +168,45 @@ img {
   font-size: 1.8vh;
 }
 
-.projects .items .item .general .status .active {
+.projects .items .item .general .status.active {
   background-color: darkgreen;
   color: wheat;
   padding: 0px 3px 0px 3px;
 }
 
-.projects .items .item .general .status .early_access {
+.projects .items .item .general .status.early_access {
   background-color: rgb(198, 201, 40);
   color: rgb(60, 60, 85);
   padding: 0px 3px 0px 3px;
 }
 
-.projects .items .item .general .status .private_access {
+.projects .items .item .general .status.internal_testing {
   background-color: rgb(201, 40, 166);
   color: rgb(236, 236, 236);
   padding: 0px 3px 0px 3px;
 }
 
-.projects .items .item .general .status .in_progress {
+.projects .items .item .general .status.in_progress {
   background-color: rgb(201, 145, 40);
   color: rgb(19, 19, 19);
   padding: 0px 3px 0px 3px;
 }
 
-.projects .items .item .general .status .idea {
+.projects .items .item .general .status.idea {
   background-color: rgb(55, 189, 189);
   color: rgb(18, 18, 31);
   padding: 0px 3px 0px 3px;
 }
-.projects .items .item .general .status .paused {
+.projects .items .item .general .status.paused {
   background-color: rgb(194, 194, 194);
   color: rgb(49, 49, 49);
   padding: 0px 3px 0px 3px;
 }
 
-.projects .items .item .general .status .abandoned {
+.projects .items .item .general .status.abandoned {
   background-color: rgb(15, 15, 15);
   color: rgb(238, 238, 238);
   padding: 0px 3px 0px 3px;
-}
-
-.projects .items .item .general .open-sourced {
-  font-size: 1.7vh;
 }
 
 .projects .items .item .description {
@@ -221,15 +215,20 @@ img {
   padding-left: 10px;
   padding-right: 10px;
   text-align: justify;
+  flex-grow: 2;
 }
 
-.projects .items .item .description .stack {
+.projects .items .item .open-sourced {
+  font-size: 1.7vh;
+}
+
+.projects .items .item .stack {
   margin-bottom: 10px;
   padding-top: 10px;
   text-align: center;
 }
 
-.projects .items .item .description .stack img {
+.projects .items .item .stack img {
   width: 3vh;
   height: 3vh;
 }
