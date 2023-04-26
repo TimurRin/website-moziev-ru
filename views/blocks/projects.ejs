@@ -1,1 +1,39 @@
-<div class="block projects">projects</div>
+<div class="block projects">
+  <div class="title">Projects</div>
+  <div class="items">
+    <% projects.forEach((project)=> { %>
+    <div class="item">
+      <div class="general">
+        <div class="name"><% if (project.website) { %>
+          <a href="<%= project.website.url %>">
+            <%= project.name %>
+          </a><% } else { %><%=project.name%><% } %>
+        </div>
+        <div class="status">
+          <% if (project.year) { %>
+          <% if (project.year[1]===project.year[0]) { %>
+          <%= project.year[0] %>
+          <% } else if (project.year[1] && project.year[1] !== true) { %> <%= project.year[0] %>&ndash;<%= project.year[1] %>
+          <% } else { %> since <%= project.year[0] %>
+          <% } %>
+          <% } %>
+          <span class="<%= project.status %>">
+            <%= project.status %>
+          </span>
+        </div>
+        <% if (project.openSourced) { %>
+        <div class="open-sourced">
+          <a href="<%= project.openSourced %>">openSourced</a>
+        </div>
+        <% } %>
+      </div>
+      <div class="description">
+        <div class="stack">
+          <% project.stack.forEach((item) => { %> <%- include('../utils/icon', {type:
+          "stack", icon: item}); %> <% }) %>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

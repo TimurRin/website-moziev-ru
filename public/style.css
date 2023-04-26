@@ -130,6 +130,110 @@ img {
   overflow: clip;
 }
 
+/* Projects block */
+
+.projects .title {
+  font-size: 6vh;
+  padding-top: 5vh;
+}
+
+.projects .items {
+  padding-top: 3vh;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: flex-start; */
+}
+
+.projects .items .item {
+  background-color: white;
+  border: 3px solid black;
+  width: 30vh;
+  margin: 1.5vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-bottom: 1vh;
+}
+
+.projects .items .item .general {
+  padding: 15px;
+}
+
+.projects .items .item .general .name {
+  font-size: 2.7vh;
+}
+
+.projects .items .item .general .status {
+  font-size: 1.8vh;
+}
+
+.projects .items .item .general .status .active {
+  background-color: darkgreen;
+  color: wheat;
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .status .early_access {
+  background-color: rgb(198, 201, 40);
+  color: rgb(60, 60, 85);
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .status .private_access {
+  background-color: rgb(201, 40, 166);
+  color: rgb(236, 236, 236);
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .status .in_progress {
+  background-color: rgb(201, 145, 40);
+  color: rgb(19, 19, 19);
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .status .idea {
+  background-color: rgb(55, 189, 189);
+  color: rgb(18, 18, 31);
+  padding: 0px 3px 0px 3px;
+}
+.projects .items .item .general .status .paused {
+  background-color: rgb(194, 194, 194);
+  color: rgb(49, 49, 49);
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .status .abandoned {
+  background-color: rgb(15, 15, 15);
+  color: rgb(238, 238, 238);
+  padding: 0px 3px 0px 3px;
+}
+
+.projects .items .item .general .open-sourced {
+  font-size: 1.7vh;
+}
+
+.projects .items .item .description {
+  font-family: "source-sans-pro";
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+.projects .items .item .description .stack {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.projects .items .item .description .stack img {
+  width: 3vh;
+  height: 3vh;
+}
+
 /* Contacts block */
 
 .contacts .title {
